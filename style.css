@@ -1,0 +1,155 @@
+html{
+    font-family: sans-serif;
+}
+
+.header{
+    text-align: center;
+    margin: auto;
+    background-color: #222222;
+}
+
+.header_logo{
+    width: 8em;
+    height: auto;
+}
+
+#hamburguer{
+    background-color: #F8E217;
+    color: #222222;
+    display: block;
+    text-align: center;
+    padding: .3em;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.header-nav{
+    background-color: #222222;
+    display: none;
+}
+
+.header-nav.show{
+    display: block;
+}
+
+ul{
+    margin: 0;
+}
+
+.header-nav ul{
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header-nav a{
+    color: #F8E217;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+.header-nav a:hover{
+    background-color: color-mix(in srgb, #F8E217, #FFFFFF 50%);
+    color: #222222;
+}
+
+.imagem-fundo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (min-width: 48em){
+    #hamburguer{
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222222;
+    }
+
+    .header_logo{
+        margin-left: 2em;
+    }
+
+    .header-nav{
+        display: block;
+    }
+
+    .header-nav ul{
+        margin-right: 2em;
+        font-size: .9em;
+    }
+
+    .header-nav li{
+        display: inline-block;
+    }
+
+    .header-nav a{
+        border-radius: 5px;
+    }
+
+    .header-nav a:hover{
+        background-color: #F8E217;
+        color: #FFFFFF;
+    }
+
+    .imagem-fundo {
+        background-image: url('imagens/cavaleiros.jpg');
+    }
+}
+
+@media screen and (max-width: 47.99em){
+    .imagem-fundo {
+        background-image: url('imagens/cavaleiros_mobile.jpg');
+    }
+}
+
+footer{
+    background-color: #222222;
+    color: #F8E217;
+    padding: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    flex-direction: row;
+}
+.social-icons a{
+    display: inline-block;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img{
+    width: 100%;
+    height: 100%;
+}
+
+.social-icons a:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 47.99em) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
